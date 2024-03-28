@@ -6,13 +6,48 @@
 Pemrograman array adalah sintaks yang kuat untuk mengakses, memanipulasi, dan mengoperasikan data dalam vektor, matriks, dan array berdimensi lebih tinggi, seperti dalam fisika, kimia, dan teknik [1]. Array merupakan salah satu tipe data yang digunakan dalam bahasa pemrograman PHP, Pascal, JAVA, C++, dan Python. Menggunakan array dapat mempermudah penyimpanan data karena berisi tabel komponen dengan tipe data yang sama. Setiap anggota array dapat diakses melalui indeks [2]. 
 
 ### 1. Array Satu Dimensi
+Array satu dimensi atau yang disebut juga dengan vektor adalah salah satu array yang nilainya hanya ditunjukkan oleh satu indeks [2]. Indeks digunakan untuk mengakses elemen array tersebut. Indeks dimulai dari 0 dan berakhir pada jumlah elemen dikurangi satu. Berikut adalah contoh kode array satu dimensi.
 
+```C++
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int arr [4] = {2,3,5,7}; //deklarasi array
+    cout << arr[0] << endl;
+    cout << arr[3]; // memanggil array yang ditunjukkan indeks
+}
+```
+Array terdiri dari 4 elemen. Program tersebut akan menampilkan elemen array yang dipanggil berdasarkan indeks yang diminta
 
 ### 2. Array Dua Dimensi
-Array dua dimensi adalah array yang terdiri dari m elemen baris dan n kolom. Bentuk array jenis ini masing-masing menggunakan 2 (dua) kelompok indeks angka direpresentasikan sebagai indeks baris dan kolom. Jika ingin memasukkan atau membaca nilai pada matriks, maka perlu terlebih dahulu mengetahui indeks baris dan kolom. [3]
+Array dua dimensi adalah array yang terdiri dari m elemen baris dan n kolom. Bentuk array jenis ini masing-masing menggunakan 2 (dua) kelompok indeks angka direpresentasikan sebagai indeks baris dan kolom. Jika ingin memasukkan atau membaca nilai pada matriks, maka perlu terlebih dahulu mengetahui indeks baris dan kolom [3]. Array ini digunakan dalam perhitungan matematika yang memiliki matriks/grafik/diagram yang memiliki sumbu x dan y [2]. Berikut adalah contoh kode array satu dimensi.
+```C++
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int arr [2][2] = {{5,4}, {7,8,}};
+    for (int i=0; i<2; i++) // baris
+    {
+        for (int j=0; j<2; j++) // kolom
+        {
+            cout << arr [i][j] << " " << ends;
+        };
+        cout << endl;
+    };
+
+}
+```
 
 ### 3. Array Multidimensi
+Array Multidimensi adalah kumpulan elemen yang disusun terstruktur dalam dua atau lebih dimensi. Pada array 2 dimensi, elemen-elemennya disusun dalam baris dan kolom, sedangkan dalam array multidimensi yang lebih tinggi, elemen-elemennya disusun dalam tiga atau lebih dimensi. Array multidimensi sering digunakan dalam pemrograman untuk merepresentasikan data yang kompleks, seperti data gambar dan data audio, atau untuk memudahkan pemrosesan data dalam bentuk matriks dan tabel [4].
 
+### 4. Array Empat Dimensi
+Array empat dimensi adalah sebuah tipe data yang memiliki empat dimensi, atau lebih dikenal dengan nama multidimensional array. Ini merupakan tipe data yang dapat digunakan untuk menyimpan data berupa bilangan, karakter, atau objek dalam sebuah matriiks yang memiliki empat dimensi. Array empat dimensi dapat digunakan dalam berbagai aplikasi, seperti simulasi, perhitungan statistik, dan simulasi fisika. Namun, peggunaan array empat dimensi juga memerlukan pengelolaan yang lebih baik karena kompleksitas yang tinggi.
+
+### 5. Array Lima Dimensi
+Array lima dimensi merujuk pada struktur data yang memiliki lima dimensi. Bentuk array ini memungkinkan untuk menyimpan dan mengakses data dalam lima arah yang berbeda. Array databases digunakan untuk merepresentasikan data dalam bentuk datacubes, seprti data sensor spasial-tempotal, citra, hasil simulasi, atau statistik [5].
 
 ## Guided 
 
