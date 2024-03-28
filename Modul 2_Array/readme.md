@@ -329,7 +329,7 @@ int main()
 #### Penjelasan:
 Kode di atas adalah program untuk mencari nilai maksimum, mnimum dan rata-rata dari sebuah array. Pertama, program meminta user untuk input jumlah elemen dalam array. Kemudia user dapat input nilai-nilai array. User kemudian disajikan dengan menu yang memungkinkan mereka memilih nilai mana yang ingin mereka cari. Pilihan 1 untuk mencari nilai maksimum, 2 untuk mencari nilai minimum, 3 untuk mencari nilai rata-rata, dan 4 untuk keluar dari program. Jika user memasukkan pilihan yang tidak valid, program akan menampilkan pesan "Pilihan tidak ada. Keluar dari program..."
 
-Program ini menggunakan konstanta `INT_MIN` dan `INT_MAX` untuk menginisialisasi nilai maksimum dan minimum array. `cout` dan `cin` digunakan untuk menampilkan menu dan mendapatkan input user. for loop digunakan untuk melakukan iterasi melalui lemen array dan menghitung nilai maksimum, minimum, dan rata-rata. `switch` digunakan untuk menangani pilihan user dan melakukan tindakan yang sesuai.
+Program ini menggunakan konstanta `INT_MIN` dan `INT_MAX` untuk menginisialisasi nilai maksimum dan minimum array. `cout` dan `cin` digunakan untuk menampilkan menu dan mendapatkan input user. for loop digunakan untuk melakukan iterasi melalui lemen array dan menghitung nilai maksimum, minimum, dan rata-rata. `switch statement` digunakan untuk menangani pilihan user dan melakukan tindakan yang sesuai.
 
 ## Kesimpulan
 
@@ -338,3 +338,5 @@ Program ini menggunakan konstanta `INT_MIN` dan `INT_MAX` untuk menginisialisasi
 [1] Harris, C., Millman, K., Walt, S., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N., Kern, R., Picus, M., Hoyer, S., Kerkwijk, M., Brett, M., Haldane, A., R'io, J., Wiebe, M., Peterson, P., G'erard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., & Oliphant, T. (2020). Array programming with NumPy. Nature. https://doi.org/10.1038/s41586-020-2649-2.
 [2] M. P. Putri, dkk., "Algoritma dan Struktur Data," WIDINA BHAKTI PERSADA BANDUNG, Bandung, Indonesia, 2022.
 [3] Windarto, Agus, dkk.,Belajar Dasar Algoritma dan Pemrograman C++, Medan, 2016.
+[4] R. G. Guntara, “Algoritma dan Pemrograman Dasar: Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen,” CV. Ruang Tentor, 2023.
+[5] Baumann, P., Misev, D., Merticariu, V. et al. Array databases: concepts, standards, implementations. J Big Data 8, 28 (2021). https://doi.org/10.1186/s40537-020-00399-2
