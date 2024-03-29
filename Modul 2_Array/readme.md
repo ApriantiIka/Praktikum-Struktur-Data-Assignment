@@ -44,10 +44,17 @@ int main ()
 Array Multidimensi adalah kumpulan elemen yang disusun terstruktur dalam dua atau lebih dimensi. Pada array 2 dimensi, elemen-elemennya disusun dalam baris dan kolom, sedangkan dalam array multidimensi yang lebih tinggi, elemen-elemennya disusun dalam tiga atau lebih dimensi. Array multidimensi sering digunakan dalam pemrograman untuk merepresentasikan data yang kompleks, seperti data gambar dan data audio, atau untuk memudahkan pemrosesan data dalam bentuk matriks dan tabel [4].
 
 ### 4. Array Empat Dimensi
-Array empat dimensi adalah sebuah tipe data yang memiliki empat dimensi, atau lebih dikenal dengan nama multidimensional array. Ini merupakan tipe data yang dapat digunakan untuk menyimpan data berupa bilangan, karakter, atau objek dalam sebuah matriiks yang memiliki empat dimensi. Array empat dimensi dapat digunakan dalam berbagai aplikasi, seperti simulasi, perhitungan statistik, dan simulasi fisika. Namun, peggunaan array empat dimensi juga memerlukan pengelolaan yang lebih baik karena kompleksitas yang tinggi.
+Array empat dimensi adalah sebuah tipe data yang memiliki empat dimensi, atau lebih dikenal dengan nama multidimensional array. Ini merupakan tipe data yang dapat digunakan untuk menyimpan data berupa bilangan, karakter, atau objek dalam sebuah matriiks yang memiliki empat dimensi. Array empat dimensi dapat digunakan dalam berbagai aplikasi, seperti simulasi, perhitungan statistik, dan simulasi fisika. Namun, peggunaan array empat dimensi juga memerlukan pengelolaan yang lebih baik karena kompleksitas yang tinggi. Sebuah array empat dimensi dapat didefinisikan seperti berikut ini.
+```C++
+int arr [2][3][3][4]
+```
+Contoh di atas menunjukkan bahwa array memiliki empat dimensi, yaitu 2,3,3, dan 4. Artinya array memiliki 2 baris, 3 kolom, 3 baris 4 kolom.
 
 ### 5. Array Lima Dimensi
-Array lima dimensi merujuk pada struktur data yang memiliki lima dimensi. Bentuk array ini memungkinkan untuk menyimpan dan mengakses data dalam lima arah yang berbeda. Array databases digunakan untuk merepresentasikan data dalam bentuk datacubes, seprti data sensor spasial-tempotal, citra, hasil simulasi, atau statistik [5].
+Array lima dimensi merujuk pada struktur data yang memiliki lima dimensi. Bentuk array ini memungkinkan untuk menyimpan dan mengakses data dalam lima arah yang berbeda. Array databases digunakan untuk merepresentasikan data dalam bentuk datacubes, seprti data sensor spasial-tempotal, citra, hasil simulasi, atau statistik [5]. Array lima dimensi dapat didefinisikan seperti berikut ini.
+```C++
+int arr [2][3][4][4][5]
+```
 
 ## Guided 
 
@@ -332,7 +339,12 @@ Kode di atas adalah program untuk mencari nilai maksimum, mnimum dan rata-rata d
 Program ini menggunakan konstanta `INT_MIN` dan `INT_MAX` untuk menginisialisasi nilai maksimum dan minimum array. `cout` dan `cin` digunakan untuk menampilkan menu dan mendapatkan input user. for loop digunakan untuk melakukan iterasi melalui lemen array dan menghitung nilai maksimum, minimum, dan rata-rata. `switch statement` digunakan untuk menangani pilihan user dan melakukan tindakan yang sesuai.
 
 ## Kesimpulan
-
+- Pemrograman array adalah sintaks yang kuat untuk mengakses, memanipulasi, dan mengoperasikan data dalam vektor, matriks, dan array berdimensi lebih tinggi, seperti dalam fisika, kimia, dan teknik.
+- Array satu dimensi atau yang disebut juga dengan vektor adalah salah satu array yang nilainya hanya ditunjukkan oleh satu indeks. 
+- Array dua dimensi adalah array yang terdiri dari m elemen baris dan n kolom. 
+- Array Multidimensi adalah kumpulan elemen yang disusun terstruktur dalam dua atau lebih dimensi. Array multidimensi sering digunakan dalam pemrograman untuk merepresentasikan data yang kompleks, seperti data gambar dan data audio, atau untuk memudahkan pemrosesan data dalam bentuk matriks dan tabel. 
+- Array empat dimensi adalah sebuah tipe data yang memiliki empat dimensi, atau lebih dikenal dengan nama multidimensional array. Array empat dimensi dapat digunakan dalam berbagai aplikasi, seperti simulasi, perhitungan statistik, dan simulasi fisika. 
+- Array lima dimensi merujuk pada struktur data yang memiliki lima dimensi. Bentuk array ini memungkinkan untuk menyimpan dan mengakses data dalam lima arah yang berbeda.
 
 ## Referensi
 [1] Harris, C., Millman, K., Walt, S., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N., Kern, R., Picus, M., Hoyer, S., Kerkwijk, M., Brett, M., Haldane, A., R'io, J., Wiebe, M., Peterson, P., G'erard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., & Oliphant, T. (2020). Array programming with NumPy. Nature. https://doi.org/10.1038/s41586-020-2649-2.
