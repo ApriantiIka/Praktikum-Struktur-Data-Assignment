@@ -336,7 +336,11 @@ Program ini menggunakan konstanta `INT_MIN` dan `INT_MAX` untuk menginisialisasi
 
 ## Referensi
 [1] Harris, C., Millman, K., Walt, S., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N., Kern, R., Picus, M., Hoyer, S., Kerkwijk, M., Brett, M., Haldane, A., R'io, J., Wiebe, M., Peterson, P., G'erard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., & Oliphant, T. (2020). Array programming with NumPy. Nature. https://doi.org/10.1038/s41586-020-2649-2.
+
 [2] M. P. Putri, dkk., "Algoritma dan Struktur Data," WIDINA BHAKTI PERSADA BANDUNG, Bandung, Indonesia, 2022.
+
 [3] Windarto, Agus, dkk.,Belajar Dasar Algoritma dan Pemrograman C++, Medan, 2016.
+
 [4] R. G. Guntara, “Algoritma dan Pemrograman Dasar: Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen,” CV. Ruang Tentor, 2023.
+
 [5] Baumann, P., Misev, D., Merticariu, V. et al. Array databases: concepts, standards, implementations. J Big Data 8, 28 (2021). https://doi.org/10.1186/s40537-020-00399-2
