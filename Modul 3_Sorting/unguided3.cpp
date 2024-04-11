@@ -1,12 +1,11 @@
 // Insertion Sort
 #include <iostream>
-#include <string>
 using namespace std;
 
 // Fungsi Insertion Sort Ascending
-void insertionSortAscending(string arr[], int n) {
+void insertionSortAscending(char arr[], int n) {
     int i, j;
-    string key;
+    char key;
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i-1;
@@ -19,9 +18,9 @@ void insertionSortAscending(string arr[], int n) {
 }
 
 // Fungsi Insertion Sort Descending
-void insertionSortDescending(string arr[], int n) {
+void insertionSortDescending(char arr[], int n) {
     int i, j;
-    string key;
+    char key;
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i-1;
@@ -33,7 +32,7 @@ void insertionSortDescending(string arr[], int n) {
     }
 }
 
-void printArray(string arr[], int size) {
+void printArray(char arr[], int size) {
     int i;
     for (i=0; i < size; i++)
         cout << arr[i] << " ";
@@ -44,7 +43,7 @@ int main() {
     int n;
     cout << "Masukkan jumlah karakter (n): "; // input panjang array
     cin >> n;
-    string arr[n];
+    char arr[n];
     cout << "Masukkan " << n << " karakter: ";
     for (int i = 0; i < n; i++) {
         cin >> arr[i];

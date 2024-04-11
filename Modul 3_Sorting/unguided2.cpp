@@ -33,5 +33,10 @@ int main() {
     bubbleSort(names, n);
     cout<<"Nama-nama warga setelah diurutkan: \n";
     printArray(names, n);
+
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "By: Aprianti Ika Larasati (2311110023)" << endl;
+    
     return 0;
 }
