@@ -321,4 +321,5 @@ Algoritma sorting merupakan salah satu konsep penting dalam ilmu komputer dengan
 
 ## Referensi
 [1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
+
 [2] A. Karunanithi, “A Survey, Discussion and Comparison of Sorting Algorithms,” Umeå University, 2014.
