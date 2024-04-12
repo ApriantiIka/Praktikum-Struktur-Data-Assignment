@@ -3,10 +3,16 @@
 <p align="center">2311110023 </p>
 
 ## Dasar Teori
+Dalam ilmu komputer, sorting adalah pekerjaan penting bagi banyak aplikasi untuk mencari dan menemukan sejumlah data yang menonjol. Gambaran umum sorting diyakini sebagai proses menata ulang data ke dalam urutan tertentu. Urutan yang digunakan adalah urutan numerik atau urutan leksikografis. Pengurutan mengatur data bilangan bulat ke dalam urutan menaik atau menurun dan serangkaian string ke dalam urutan abjad. Ini juga bisa disebut sebagai pengurutan data. Sorting dianggap sebagai salah satu tugas paling mendasar di banyak aplikasi komputer karena pencarian array atau list yang diurutkan membutuhkan waktu lebih sedikit jika dibandingkan dengan list yang tidak diurutkan [1].
 
+### 1. Bubble Sort
+Bubble sort adalah algoritma pengurutan sederhana yang paing lambat yang bekerja dengan membandingkan setiap elemen dalam list dengan elemen tetangganya dan menukarnya jika urutannya tidak diinginkan. Algoritma melanjutkan operasi hingga berhasil melewati list tanpa menukar elemen apapun, yang menunjukkan bahwa list telah diurutkan. Proses ini membuat algoritma bekerja lebih lambat ketika ukuran input n bertambah. Karena alasan ini, algoritma inin dianggap sebagai algoritma pengurutan yang paling tidak efisien dengan jumlah data yang besar [2].
 
-### 1. Array Satu Dimensi
+### 2. Insertion Sort
+Insertion sort adalah algoritma sorting yang sederhana dan efisien yang berguna untuk list kecil dan sebagian besar list yang diurutkan. Algoritma ini bekerja dengan memasukkan setiap elemen posisi yang sesuai dalam list terakhir yang diurutkan. Untuk setiap penyisipan dibutuhkan satu elemen dan menemukan posisi yang sesuai dalam list yang diurutkan dengan membandingkan dengan elemen tetangga dan menyisipkannya pada posisi tersebut. Operasi ini diulangi hingga daftar diurutkan sesuai urutan yang diinginkan. Insertion sort adalah algoritma in-place dan hanya memerlukan sejumlah ruang memori tambahan yang konstan. Algoritma ini menjadi lebih tidak efisien untuk ukuran data masukan yang lebih besar jika dibandingkan dengan algoritma lainnya. Namun, secara umum insertion sort sering digunakan sebagai bagian dari algoritma yang lebih canggih [2]. 
 
+### 3. Selection Sort
+Selection sort adalah metode pengurutan sederhana lainnya yang bekerja lebih baik daripada bubble sort dan lebih buruk daripada insertion sort. Algoritma ini bekerja dengan mencari elemen terkecil atau tertinggi (yang kemungkinan besar merupakan elemen yang diinginkan) dari list yang belum diurutkan dan menukar dengan elemen pertama dari list yang sudah diurutkan, kemudian menemukan elemen terkecil berikutnya dari list yang belum diurutkan dan menukar dengan elemen kedua dari list yang diurutkan. Akibatnya, elemen yang diurutkan akan bertambah di bagian atas array dan sisanya akan tetap tidak diurutkan. Algoritma melanjutkan operasi hingga list sudah urut. Selection sort juga merupakan algoritma in-place karena memerlukan jumlah memori yang konstan. Seperti beberapa metode sorting sederhana lainnya, selection sort juga tidak efisien untuk array besar [2].
 
 ## Guided 
 
@@ -310,5 +316,9 @@ Fungsi `insertionSortDescending` mengambil array char dan panjangnya sebagai inp
 Fungsi `printArray` adalah fungsi untuk mencetak isi array.
 Pada fungsi `main`, user diminta untuk menginputkan panjang array dan karater dalam array. Fungsi `printArray` dipanggil untuk mencetak array sebelum melakukan sorting. Kemudian, fungsi `insertionSortAscending` dipanggil untuk mengurutkan array secara ascending (menaik). Fungsi `printArray` dipanggil lagi untuk mencetak array yang diurutkan. Terakhir, fungsi `insertionSortDescending` dipanggil untuk mengurutkan array dalam urutan descending (menurun) dan fungsi `printArray` dipanggil lagi untuk mencetak array yang telah diurutkan.
 
+## Kesimpulan
+Algoritma sorting merupakan salah satu konsep penting dalam ilmu komputer dengan berbagai aplikasi dalam berbagai bidang. Memahami dan mengimplementasikan algoritma sorting yang tepat dapat membantu meningkatkan efisiensi dan kinerja program. Macam-macam algoritma sorting, diantaranya adalah bubble sort, insertion sort, dan selection sort. Algoritma sorting yang paling efisien untuk data kecil maupun data besar adalah insertion sort.
+
 ## Referensi
-[1] 
+[1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
+[2] A. Karunanithi, “A Survey, Discussion and Comparison of Sorting Algorithms,” Umeå University, 2014.
