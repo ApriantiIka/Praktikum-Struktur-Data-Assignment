@@ -3,10 +3,24 @@
 <p align="center">2311110023 </p>
 
 ## Dasar Teori
-Dalam ilmu komputer, 
+Pencarian (Searching) yaitu proses menemukan suatu nilai tertentu pada kumpulan data. Hasil pencarian adalah salah satu dari tiga keadaan ini: data ditemukan, data ditemukan lebih dari satu, atau data tidak ditemukan. Searching juga dapat dianggap sebagai proses pencarian suatu data di dalam sebuah array dengan cara mengecek satu persatu pada setiap index baris atau setiap index kolomnya dengan menggunakan teknik perulangan untuk melakukan pencarian data. Terdapat 2 metode pada  algoritma Searching, yaitu: 
 
-### 1. Bubble Sort
+### 1. Sequential Search
+Sequential Search merupakan salah satu algoritma pencarian data yang biasa digunakan untuk data yang berpola acak atau belum terurut. Sequential search juga merupakan teknik pencarian data dari array yang paling mudah, dimana data dalam array dibaca satu demi satu dan diurutkan dari index terkecil ke index terbesar, maupun sebaliknya. Konsep Sequential Search yaitu: 
+- Membandingkan setiap elemen pada array satu per satu secara berurut 
+- Proses pencarian dimulai dari indeks pertama hingga indeks terakhir 
+- Proses pencarian akan berhenti apabila data ditemukan. Jika hingga akhir array data masih juga tidak ditemukan, maka proses pencarian tetap akan dihentikan 
+- Proses perulangan pada pencarian akan terjadi sebanyak jumlah N elemen pada array
 
+### 2. Binary Search
+Binary Search termasuk ke dalam interval search, dimana algoritma ini merupakan algoritma pencarian pada array/list dengan elemen terurut. Pada metode ini, data harus diurutkan terlebih dahulu dengan cara data dibagi menjadi dua bagian (secara logika), untuk setiap tahap pencarian. Dalam penerapannya algoritma ini sering digabungkan dengan algoritma sorting karena data yang akan digunakan harus sudah terurut terlebih dahulu. Konsep Binary Search: 
+- Data diambil dari posisi 1 sampai posisi akhir N 
+- Kemudian data akan dibagi menjadi dua untuk mendapatkan posisi data tengah 
+- Selanjutnya data yang dicari akan dibandingkan dengan data yang berada di posisi tengah, apakah lebih besar atau lebih kecil. 
+- Apabila data yang dicari lebih besar dari data tengah, maka dapat dipastikan bahwa data yang dicari kemungkinan berada di sebelah kanan dari data tengah. Proses pencarian selanjutnya akan dilakukan pembagian data menjadi dua bagian pada bagian kanan dengan acuan posisi data tengah akan menjadi posisi awal untuk pembagian tersebut. 
+- Apabila data yang dicari lebih kecil dari data tengah, maka dapat dipastikan bahwa data yang dicari kemungkinan berada di sebelah kiri dari data tengah. Proses pencarian selanjutnya akan dilakukan pembagian data menjadi dua bagian pada bagian kiri. Dengan acuan posisi data tengah akan menjadi posisi akhir untuk pembagian selanjutnya. 
+- Apabila data belum ditemukan, maka pencarian akan dilanjutkan dengan kembali membagi data menjadi dua 
+- Namun apabila data bernilai sama, maka data yang dicari langsung ditemukan dan pencarian dihentikan
 
 ## Guided 
 
@@ -136,7 +150,7 @@ Kode di atas menggunakan algoritma Binary Search. Program tersebut digunakan unt
 #include <string>
 using namespace std;
 
-void selection_sort(string &kata) { // sorting menggunakan selection sort
+void selection_sort(string & kata) { // sorting menggunakan selection sort
     for (int i = 0; i < kata.length() - 1; i++) {
         int min_index = i;
         for (int j = i + 1; j < kata.length(); j++) {
@@ -207,7 +221,8 @@ int main() {
 ![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/1a542086-c90c-4d72-a813-83c93215f6e0)
 
 #### Penjelasan:
-Program tersebut merupakan program untuk mencari huruf dalam suatu kata menggunakan algoritma binary search. 
+Program tersebut merupakan program untuk mencari huruf dalam suatu kata menggunakan algoritma binary search. Huruf-huruf pada kata akan diurutkan terlebih dahulu menggunakan Selection Sort. Fungsi `void selection_sort(string &kata)` digunakan untuk mengurutkan huruf-huruf pada kata menggunakan Selection Sort. Fungsi `int binary_search(string kata, char cari)` digunakan untuk mencari sebuah huruf pada kata yang telah diurutkan menggunakan algoritma Binary Search. Didalam fungsi `main`, kata dan huruf yang ingin dicari akan diinput oleh user. Seteleah huruf-huruf diurutkan , akan ditampilkan indeks huruf tersebut pada kata. Jika hurud tidak ditemukan, maka akan ditampilkan pesan bahwa huruf tersebut tidak ditemukan pada kata.
+
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 ```C++
@@ -248,6 +263,7 @@ int main() {
 ![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/247402a2-f8f3-4320-826f-3a61af5af43e)
 
 #### Penjelasan:
+Program di atas digunakan untuk menghitung jumlah huruf vokal pada sebuah kalimat yang diinputkan oleh user. Fungsi `hitungVokal` digunakan untuk menghitung jumlah huruf vokal pada string `kalimat`. Dalam fungsi ini, dilakukan pencarian huruf-huruf vokal pada string `kalimat` dengan menggunakan algoritma pencarian. Jika huruf tersebut adalah huruf vokal, maka akan ditambahkan ke variabel `count`. Setelah selesai melakukan pencarian, variabel `count` akan dikembalikan sebagai hasil dari fungsi `hitungVokal`. Fungsi `getline(cin, kalimat)` merupakan fungsi yang mengambil input dari user berupa string. Setelah user menginputkan sebuah kalimat, program akan memanggil fungsi `hitungVokal` untuk menghitung jumlah huruf vokal pada string `kalimat`. 
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 ```C++
@@ -292,9 +308,7 @@ int main() {
 ![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/8a673e5f-3c94-49ca-9370-42419e6364ea)
 
 #### Penjelasan:
+Program di atas adalah program untuk mencari jumlah angka 4 pada sebuah array menggunakan algoritma Sequential Search. Fungsi `sequential_search` pada program tersebut digunakan untuk mencari jumlah angka `cari` pada array `data` dengan panjang `n`. Array `data` dideklarasikan sebagai array integer dengan panjang 10 dan diinisialisasi dengan nilai-nilai yang diinginkan. Perulangan for pada program tersebut digunakan untuk melakukan iterasi pada setiap elemen dari array. Jika angka tersebut ditemukan, maka akan ditambahkan ke variabel `count`. Setelah selesai melakukan pencarian, variabel `count` akan dikembalikan sebagai hasil dari fungsi `sequential_search`. Output program tersebut akan menampilkan pesan "Banyak angka [cari] pada data tersebut adalah [jumlah] angka."
 
 ## Kesimpulan
-Algoritma 
-
-## Referensi
-[1] 
+Sequential Search adalah metode pencarian yang mengunjungi setiap elemen dalam urutan dan memeriksa apakah elemen tersebut adalah yang dicari. Meskipun sederhana, Sequential Search memiliki kompleksitas waktu O(n) di mana n adalah jumlah elemen dalam urutan. Di sisi lain, Binary Search adalah metode yang memanfaatkan sifat urutan terurut. Algoritma ini membagi urutan menjadi dua bagian dan memeriksa apakah elemen yang dicari berada di bagian kiri atau kanan. Jika ya, pencarian dilanjutkan pada bagian yang relevan. Binary Search memiliki kompleksitas waktu O(log n), yang membuatnya lebih efisien daripada Sequential Search. Dalam laporan ini, kita mempelajari kedua algoritma ini dan membandingkan kelebihan dan kekurangannya.
