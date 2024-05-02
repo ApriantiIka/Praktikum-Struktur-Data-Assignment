@@ -230,14 +230,64 @@ Kemudian dibuat sebuah variabel `bukux` yang bertipe `Buku`. Pada fungsi `main()
 
 ### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya? 
 Array digunakan untuk menyimpan beberapa elemen struct. Hal ini memungkinkan kita mengelompokkan data dengan tipe yang sama dalam satu struct. Misalnya, kita ingin mengisi data mie instan sebanyak 3 kali. Berikut adalah cara mengisi data dan menampilkannya.
-```C++
 
+```C++
+#include <iostream>
+#include<string>
+using namespace std;
+
+struct mie_instan {
+    string brand;
+    string varian;
+    double harga;
+};
+
+int main() {
+    mie_instan mie[3]; // Array of struct mie_instan
+
+    // Mengisi data
+    for (int i = 0; i < 3; i++) {
+        cout << "Brand: ";
+        cin >> mie[i].brand;
+        cout << "Varian: ";
+        cin >> mie[i].varian;
+        cout << "Harga: ";
+        cin >> mie[i].harga;
+        cout << endl;
+    }
+
+    // Menampilkan data
+    cout << "Data Mie Instan:" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << "Mie Instan ke-" << i + 1 << ":" << endl;
+        
+        cout << "Brand: " << mie[i].brand << endl;
+        cout << "Varian: " << mie[i].varian << endl;
+        cout << "Harga: " << mie[i].harga << endl;
+        cout << endl;
+    }
+
+    return 0;
+}
 ```
 
+Program di atas meminta input 3 data mie instan, yaitu brand, varian, dan harga, kemudian menampilkan data tersebut.
+
+Kelebihan menggunakan array untuk deklarasi varibel struct, yaitu:
+- Pengelolaan data terstruktur: Struct of array memungkinkan kita mengelola data dengan tipe yang sama secara terstruktur.
+- Akses elemen dengan mudah: Kita dapat mengakses elemen struct dengan indeks array, sehingga memudahkan akses data individual.
+- Penggunaan memori yang efisien: Struct of array mengalokasikan memori di lokasi yang berdekatan untuk semua elemennya
+Sedangkan kekurangan menggunakan array untuk deklarasi varibel struct, yaitu:
+- Ukuran tetap: Ukuran array ditentukan pada saat deklarasi dan tidak dapat diubah selama eksekusi program.
+- Penggunaan memori yang statis: Tidak fleksibel untuk menangani perubahan dinamis.
+- Tidak efisien untuk penghapusan dan penambahan elemen: Jika kita perlu menghapus atau menambah elemen, harus menggeser elemen lain.
+- Pencarian lambat: Pencarian elemen dalam array memerlukan iterasi linear.
+- Tidak mendukung struct yang dinamis: Tidak cocok untuk situasi di mana ukuran data berubah secara dinamis.
+
 ## Kesimpulan
-Algoritma 
+Struct merupakan tipe data bentukan yang berisi kumpulan variabel yang bernaung dalam suatu nama yang sama dan memiliki kaitan satu sama lain. Berbeda dengan array yang hanya berupa kumpulan variabel dengan tipe data yang sama, struct bisa memiliki variabel-variabel yang memiliki tipe data yang sama atau berbeda, bahkan bisa menyimpan variabel yang bertipe array atau struct itu sendiri. Untuk membuat tipe data struktur dalam C++, kita harus dideklarasikan dengan menggunakan kata kunci struct.
 
 ## Referensi
 [1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
 
-[2] A. Karunanithi, “A Survey, Discussion and Comparison of Sorting Algorithms,” Umeå University, 2014.
+[2] 
