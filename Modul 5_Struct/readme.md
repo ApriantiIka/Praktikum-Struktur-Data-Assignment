@@ -5,8 +5,11 @@
 ## Dasar Teori
 Dalam ilmu komputer, 
 
-### 1. Bubble Sort
+### 1. Variabel
+Variabel dalam pemrograman merupakan entitas multifungsi yang dapat digunakan untuk berbagai tujuan, sehingga sulit untuk didefinisikan[1]. Secara matematis variabel adalah sebuah simbol yang mewakili kuantitas di dalam pemrograman komputer. Variabel adalah suatu tempat yang disediakan dalam memori komputer untuk menampung data dan nilai [2]. Variabel berperan efektif dalam meningkatkan pemrograman pemula dengan meningkatkan kinerja dan kemampuan kognitif [3] Variabel penting dalam pemrograman, dan nama variabel deskriptif membantu pembaca memahami kode dengan lebih mudah.
 
+### 2. Struct
+Struct atau Record, seperti array, record atau struct termasuk data komposit. Record biasa dikenal pada bahasa pemrograman Pascal atau Delphi sedangkan struct lebih dikenal di C++. Lain hal dengan array, tipe data record menampung tipe data yang berbeda-beda (heterogen) [4]. Sebuah struct di C++ setara dengan class, tetapi anggota struct secara default memiliki akses public, sehingga digunakan untuk struktur data sederhana yang berisi public fields [5].
 
 ## Guided 
 
@@ -288,6 +291,12 @@ Sedangkan kekurangan menggunakan array untuk deklarasi varibel struct, yaitu:
 Struct merupakan tipe data bentukan yang berisi kumpulan variabel yang bernaung dalam suatu nama yang sama dan memiliki kaitan satu sama lain. Berbeda dengan array yang hanya berupa kumpulan variabel dengan tipe data yang sama, struct bisa memiliki variabel-variabel yang memiliki tipe data yang sama atau berbeda, bahkan bisa menyimpan variabel yang bertipe array atau struct itu sendiri. Untuk membuat tipe data struktur dalam C++, kita harus dideklarasikan dengan menggunakan kata kunci struct.
 
 ## Referensi
-[1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
+[1] Törley, G., & Zsakó, L. (2021). The Role of Variable in Programming: Examples and Methodology. Central-European Journal of New Technologies in Research, Education and Practice. https://doi.org/10.36427/CEJNTREP.3.2.1436.
 
-[2] 
+[2] Effendi, Ridwan. “Keunikan Variabel Dalam Pemrograman Visual C++.” MANAJEMEN INFORMATIKA, vol. 1, no. 2, 1 Sept. 2009, jurnal.polsri.ac.id/index.php/mi/article/view/42.
+
+[3] Shi, N., Cui, W., Zhang, P., & Sun, X. (2018). Evaluating the Effectiveness Roles of Variables in the Novice Programmers Learning. Journal of Educational Computing Research, 56, 181 - 201. https://doi.org/10.1177/0735633117707312.
+
+[4] Yogga Pratama W. Artikel Algoritma Dan Struktur Data. 28 Mar. 2020, https://doi.org/10.31219/osf.io/qfwvc. Accessed 4 Apr. 2024.
+
+[5] Olsson, M. (2020). Structs and Unions. C++20 Quick Syntax Reference. https://doi.org/10.1007/978-1-4842-3600-0_19.
