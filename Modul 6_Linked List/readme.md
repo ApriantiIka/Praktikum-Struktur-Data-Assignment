@@ -718,7 +718,23 @@ int main(){
 ![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/a1f244ab-5cfc-4e66-a2c8-cc1b026c4b0a)
 
 #### Penjelasan:
-Program tersebut merupakan program untuk 
+Program tersebut menggunakan struktur data Single Linked List Non-Circular yang berarti setiap node hanya memiliki satu pointer yang menunjuk ke node berikutnya. Program ini mampu melakukan berbagai tugas, seperti insialiasi node; memeriksa apakah list kosong; menambah node di depan, belakang, atau tengah; menghitung jumlah node di list; menghapus node di depan, belakang, atau tengah list; mengubah posisi node di depan, belakang, atau tengah list; dan menampilkan isi list. 
+
+Program ini memiliki beberapa function, yaitu:
+- `init()`: untuk inisialisasi node head dan tail menjadi NULL.
+- `isEmpty()`: untuk memeriksa apakah list kosong.
+- `insertDepan()`: untuk menambah node di depan list.
+- `insertBelakang()`: untuk menambah node di belakang list.
+- `insertTengah()`: untuk menambah node di tengah list pada posisi tertentu.
+- `hitungList()`: untuk menghitung jumlah node di list.
+- `hapusDepan()`: untuk menghapus node di depan list.
+- `hapusBelakang()`: untuk menghapus node di belakang list.
+- `hapusTengah()`: untuk menghapus node di tengah list.
+- `ubahDepan()`: Mengubah node di depan list.
+- `ubahTengah()`: Mengubah node di tengah list pada posisi tertentu.
+- `ubahBelakang()`: Mengubah node di belakang list.
+- `tampil()`: Menampilkan isi list.
+Program ini menggunakan pointer untuk menghubungkan node-node di dalam list. Setiap node memiliki dua komponen, yaitu nama dan usia serta satu pointer next yang menunjuk ke node berikutnya. Ketika user menambahkan node di depan list, user membuat node baru dan menghubungkannya dengan node head. Ketika user menambah node di belakang list, user juga membuat node baru dan menghubungkannya dengan node tail. Saat user menghapus node di depan list, user menghapus node head dan menghubungkan dengan nide berikutnya dengan node head. Sedangkan saat user menghapus node di belakang list, user menghapus node tail dan menghubungkan node sebelumnya dengan node tail. Ketika node diubah di depan list, user mengubah nilai `nama` dan `usia` dari node head. Sedangkan ketika node diubah di tengah list, user mengubah nilai `nama` dan `usia` dari node yang dipilih.
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
 
@@ -973,10 +989,28 @@ int main() {
 ![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/cf201520-8fac-4960-8f19-6159bf5eb9d9)
 
 #### Penjelasan:
-
+Program ini menggunakan struktur data Double Linked List yang berarti setiap node memiliki 2 pointer, yaitu `prev` yang menunjuk ke node sebelumnya dan `next` yang menunjuk ke node berikutnya. Pada blok kode `Class Node` memiliki empat komponen, yaitu `productName`, `price`, `prev`, dan `next`. `productName` dan `price` adalah data yang disimpan di node, sedangkan `prev` dan `next` adalah pointer yang menunjuk ke node sebelumnya dan node berikutnya. Terdapat enam fungsi pada blok kode `Class DoublyLinkedList`, yaitu:
+- `push()`: Menambah node di depan list.
+- `append()`: Menambah node di belakang list.
+- `insertAtPosition()`: Menambah node di urutan tertentu.
+- `deleteAtPosition()`: Menghapus node di urutan tertentu.
+- `pop()`: Menghapus node di depan list.
+- `update()`: Mengupdate node di depan list.
+- `deleteAll()`: Menghapus semua node di list.
+- `display()`: Menampilkan isi list.
+Main function membuat sebuah objek dari `Class DoublyLinkedList` dan menampilkan menu kepada user. Menu terdiri dari beberapa pilihan perintah yang memungkinan user untuk menambahkan data, menghapus data, memperbarui data, menambahkan data ke posisi tertentu, menghapus data berdasarkan posisi, menghapus semua data, menampilkan data, dan keluar dari program.
 
 ## Kesimpulan
-Algoritma 
+Linked list adalah struktur data yang dinamis untuk menyimpan data secara berurutan. Berbeda dengan array yang memiliki ukuran tetap, linked list dapat bertambah dan berkurang sesuai kebutuhan. Struktur ini terdiri dari node, yang merupakan elemen penyusunnya, dan pointer, yang menghubungkan antar node.
+
+Jenis-jenis linked list:
+- Single linked list: Setiap node hanya memiliki satu pointer yang menunjuk ke node berikutnya.
+- Double linked list: Setiap node memiliki dua pointer, yaitu pointer ke node sebelumnya dan pointer ke node berikutnya.
+- Circular linked list: Node terakhir dalam linked list menunjuk kembali ke node pertama.
+Operasi-operasi pada linked list:
+- Insert: Memasukkan node baru ke dalam linked list.
+- Delete: Menghapus node dari linked list.
+- Search: Mencari node dengan nilai tertentu dalam linked list.
 
 ## Referensi
 [1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
