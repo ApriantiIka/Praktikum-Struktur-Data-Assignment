@@ -698,8 +698,24 @@ int main(){
 ```
 
 #### Output:
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/637b3259-6f32-40c8-aaff-8d1c3e17ab74)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/76e29d37-9859-42b4-b0eb-00aac3cf8585)
 
 #### Full Code Screenshot:
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/4b46801f-a6e1-41fc-b7e4-f30957ebc274)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/19283907-bfa0-40ac-a21c-889ac578b18f)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/7c8362bd-a973-4ba7-bc88-1c9c328a2019)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/787fb5d6-74fb-41a7-8899-ebaebb0ef14e)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/b8736dad-8484-40b3-8c88-6fde63683e02)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/da4ff35f-6c24-465c-9619-e079026bc061)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/a1f244ab-5cfc-4e66-a2c8-cc1b026c4b0a)
 
 #### Penjelasan:
 Program tersebut merupakan program untuk 
@@ -707,12 +723,254 @@ Program tersebut merupakan program untuk
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
 
 ```C++
+#include <iostream>
+#include <string>
+using namespace std;
 
+// DOUBLE LINKED LIST
+class Node {
+    public:
+        string productName;
+        int price;
+        Node* prev; // POINTER PREVIOUS
+        Node* next;
+};
+class DoublyLinkedList {
+    public:
+        Node* head;
+        Node* tail;
+        DoublyLinkedList() {
+            head = nullptr;
+            tail = nullptr;
+        }
+        void push(string productName, int price) { // TAMBAH DEPAN
+            Node* newNode = new Node;
+            newNode->productName = productName;
+            newNode->price = price;
+            newNode->prev = nullptr;
+            newNode->next = head;
+            if (head!= nullptr) {
+                head->prev = newNode;
+            } else {
+                tail = newNode;
+            }
+            head = newNode;
+        }
+        void append(string productName, int price) { // TAMBAH BELAKANG
+            Node* newNode = new Node;
+            newNode->productName = productName;
+            newNode->price = price;
+            newNode->prev = tail;
+            newNode->next = nullptr;
+            if (tail!= nullptr) {
+                tail->next = newNode;
+            } else {
+                head = newNode;
+            }
+            tail = newNode;
+        }
+        void insertAtPosition(string productName, int price, int position) { // TAMBAH DATA URUTAN TERTENTU
+            Node* newNode = new Node;
+            newNode->productName = productName;
+            newNode->price = price;
+            if (position == 0) {
+                push(productName, price);
+                return;
+            }
+            Node* current = head;
+            int currentPosition = 0;
+            while (current!= nullptr) {
+                if (currentPosition == position - 1) {
+                    newNode->prev = current;
+                    newNode->next = current->next;
+                    if (current->next!= nullptr) {
+                        current->next->prev = newNode;
+                    } else {
+                        tail = newNode;
+                    }
+                    current->next = newNode;
+                    return;
+                }
+                current = current->next;
+                currentPosition++;
+            }
+        }
+        void deleteAtPosition(int position) { // HAPUS DATA URUTAN TERTENTU
+            if (position == 0) {
+                pop();
+                return;
+            }
+            Node* current = head;
+            int currentPosition = 0;
+            while (current!= nullptr) {
+                if (currentPosition == position - 1) {
+                    Node* temp = current->next;
+                    current->next = temp->next;
+                    if (temp->next!= nullptr) {
+                        temp->next->prev = current;
+                    } else {
+                        tail = current;
+                    }
+                    delete temp;
+                    return;
+                }
+                current = current->next;
+                currentPosition++;
+            }
+        }
+        void pop() { // HAPUS DEPAN
+            if (head == nullptr) {
+                return;
+            }
+            Node* temp = head;
+            head = head->next;
+            if (head!= nullptr) {
+                head->prev = nullptr;
+            } else {
+                tail = nullptr;
+            }
+            delete temp;
+        }
+        bool update(string oldProductName, string newProductName, int newPrice) { // UPDATE DEPAN
+            Node* current = head;
+            while (current!= nullptr) {
+                if (current->productName == oldProductName) {
+                    current->productName = newProductName;
+                    current->price = newPrice;
+                    return true;
+                }
+                current = current->next;
+            }
+            return false;
+        }
+        void deleteAll() { // HAPUS
+            Node* current = head;
+            while (current!= nullptr) {
+                Node* temp = current;
+                current = current->next;
+                delete temp;
+            }
+            head = nullptr;
+            tail = nullptr;
+        }
+        void display() {
+            Node* current = head;
+            while (current!= nullptr) { 
+                cout << "Nama produk: " << current->productName << ", Harga: " << current->price << endl;
+                current = current->next;
+            }
+        }
+};
+
+int main() {
+    DoublyLinkedList list;
+    while (true) {
+        // PROGRAM MENU
+        cout << "\t Toko Skincare Purwokerto" << endl;
+        cout << "1. Tambah Data" << endl;
+        cout << "2. Hapus Data" << endl;
+        cout << "3. Update Data" << endl;
+        cout << "4. Tambah Data Urutan Tertentu" << endl;
+        cout << "5. Hapus Data Urutan Tertentu" << endl;
+        cout << "6. Hapus Seluruh Data" << endl;
+        cout << "7. Tampilkan Data" << endl;
+        cout << "8. Exit" << endl;
+        int choice;
+        cout << "Masukkan Pilihan Anda: ";
+        cin >> choice;
+        switch (choice) {
+            case 1: {
+                string productName;
+                int price;
+                cout << "Masukkan nama produk: ";
+                cin >> productName;
+                cout << "Masukkan harga: ";
+                cin >> price;
+                list.append(productName, price);
+                break;
+            }
+            case 2: {
+                list.pop();
+                break;
+            }
+            case 3: {
+                string oldProductName, newProductName;
+                int newPrice;
+                cout << "Masukkan nama produk yang ingin diupdate: ";
+                cin >> oldProductName;
+                cout << "Masukkan nama produk yang baru: ";
+                cin >> newProductName;
+                cout << "Masukkan harga yang baru: ";
+                cin >> newPrice;
+                bool updated = list.update(oldProductName, newProductName, newPrice);
+                if (!updated) {
+                    cout << "Data tidak ditemukan" << endl;
+                }
+                break;
+            }
+            case 4: {
+                string productName;
+                int price, position;
+                cout << "Masukkan nama produk: ";
+                cin >> productName;
+                cout << "Masukkan harga: ";
+                cin >> price;
+                cout << "Masukkan posisi: ";
+                cin >> position;
+                list.insertAtPosition(productName, price, position);
+                break;
+            }
+            case 5: {
+                int position;
+                cout << "Masukkan posisi: ";
+                cin >> position;
+                list.deleteAtPosition(position);
+                break;
+            }
+            case 6: {
+                list.deleteAll();
+                break;
+            }
+            case 7: {
+                list.display();
+                break;
+            }
+            case 8: {
+                return 0;
+            }
+            default: {
+                cout << "Pilihan tidak valid" << endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
 ```
 
 #### Output:
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/317497f9-e62e-4fe1-b906-fda8a4cab84f)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/e5b051e6-beb3-4286-a2f1-415ac58aa6ea)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/bc13627a-306e-41b0-a743-0262b3e4440f)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/e094fa98-2b20-4600-a858-54d5e37c84f7)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/71563ea1-155b-416f-99b2-573d7fe6b0c5)
 
 #### Full Code Screenshot:
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/70ab7ea6-2462-4b58-9e97-a49069e6c540)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/1f5961d6-d3fe-48f3-a044-754bd509531d)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/9d6cfb96-8817-41fc-aa1d-8e89e6daaf7d)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/307b3e13-b726-48ee-8b0f-04007486a51d)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/54049cdf-81f2-49cd-8fe5-886be1e51d51)
+
+![image](https://github.com/ApriantiIka/Praktikum-Struktur-Data-Assignment/assets/161322924/cf201520-8fac-4960-8f19-6159bf5eb9d9)
 
 #### Penjelasan:
 
