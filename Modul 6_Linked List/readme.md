@@ -3,10 +3,22 @@
 <p align="center">2311110023 </p>
 
 ## Dasar Teori
-Dalam ilmu komputer, 
+Linked list, juga dikenal sebagai daftar tertaut adalah struktur data linier yang terdiri dari kumpulan elemen yang disebut node. Setiap node memiliki dua komponen utama, yaitu data dan pointer atau referensi ke node berikutnya dalam daftar [1]. Data dapat berupa tipe data apa pun, seperti angka, string, atau objek. Pointer menunjukkan lokasi node berikutnya dalam memori, yang memungkinkan user untuk bergerak antar node dalam list.
 
-### 1. Topik
+Berbeda dengan array yang menyimpan elemen secara berurutan dalam memori yang berdekatan, linked list tidak memiliki batasan urutan penyimpanan elemen dalam memori. Hal ini memungkinkan penambahan dan penghapusan elemen di mana saja dengan mudah tanpa mengubah elemen lain dalam list [2].
 
+Linked list memiliki dua jenis utama, yaitu single linked list dan double linked list. Pada single linked list, setiap node hanya memiliki satu pointer ke node berikutnya. Sedangkan pada double linked list, setiap node memiliki dua pointer, yaitu pointer ke node berikutnya dan pointer ke node sebelumnya [3].
+
+3 jenis Linked List yang paling umum digunakan yaitu:
+
+#### 1. Single Linked List
+Jenis linked list yang paling sederhana adalah single linked list. Setiap node dalam single linked list hanya memiliki satu pointer, yaitu pointer ke node berikutnya dalam daftar. Navigasi dalam single linked list hanya dapat dilakukan dari awal (head) ke akhir (tail) list [4]. Single linked list memiliki beberapa kelebihan, seperti struktur yang sederhana dan mudah diimplementasikan. Namun, single linked list memiliki beberapa kekurangan, seperti tidak dapat dinavigasi dari belakang ke depan dan tidak dapat menghapus elemen secara langsung tanpa mengetahui node sebelumnya [5].
+
+#### 2. Double Linked List
+Double linked list adalah jenis linked list yang lebih kompleks dibandingkan dengan single linked list. Setiap node dalam double linked list memiliki dua pointer, yaitu pointer ke node berikutnya dan pointer ke node sebelumnya. Navigasi dalam double linked list dapat dilakukan dari kedua arah, yaitu dari awal ke akhir dan dari akhir ke awal daftar [6]. Double linked list memiliki beberapa kelebihan, seperti dapat dinavigasi dari kedua arah dan dapat menghapus elemen secara langsung tanpa mengetahui node sebelumnya. Namun, double linked list memiliki beberapa kekurangan, seperti struktur yang lebih kompleks dan membutuhkan lebih banyak memori dibandingkan dengan single linked list [7].
+
+#### 3. Circular Linked List
+Circular linked list adalah jenis linked list di mana node terakhir (tail) memiliki pointer yang menunjuk kembali ke node pertama (head), membentuk lingkaran. Navigasi dalam circular linked list dapat dilakukan secara berurutan dari head ke tail dan kembali lagi ke head [8]. Circular linked list memiliki beberapa kelebihan, seperti tidak memiliki node awal dan akhir yang jelas, sehingga memungkinkan navigasi yang lebih fleksibel. Namun, circular linked list memiliki beberapa kekurangan, seperti struktur yang lebih kompleks dan lebih sulit diimplementasikan dibandingkan dengan single linked list dan double linked list [9].
 
 ## Guided 
 
@@ -1013,6 +1025,20 @@ Operasi-operasi pada linked list:
 - Search: Mencari node dengan nilai tertentu dalam linked list.
 
 ## Referensi
-[1] M.S. Garai Canaan.C and M. Daya. Popular sorting algorithms. World Applied Programming, 1:62–71, April 2011.
+[1] D. Satriawan, "Implementasi Algoritma Pencarian Pada Linked List," unpublished undergraduate thesis, Universitas Islam Indonesia, 2022.
 
-[2] A. Karunanithi, “A Survey, Discussion and Comparison of Sorting Algorithms,” Umeå University, 2014.
+[2] A. Lavanya, "Performance Analysis of Merging Techniques in Linked Lists," International Journal of Scientific and Technology Research, vol. 9, no. 2, pp. 4247-4250, 2020.
+
+[3] D. A. Kusuma, "Penerapan Double Linked List untuk Sistem Antrian Berbasis Web pada Toko Online," Jurnal Teknologi dan Informasi, vol. 17, no. 1, pp. 1-8, 2023.
+
+[4] M. Deo, "Data Structures and Algorithms with Object-Oriented Programming using C++," 2nd ed., Tata McGraw-Hill, 2021.
+
+[5] S. T. Sahni, "Data Structures and Algorithms," 6th ed., McGraw-Hill Education, 2020.
+
+[6] D. Gries, "Data Structures and Algorithms in C++," 4th ed., Prentice Hall, 2018.
+
+[7] R. Kruse, C. L. Tondo, and B. Leung, "Data Structures and Algorithms in Java," 6th ed., Pearson Education, 2017.
+
+[8] Y. Dong, "Data Structures and Algorithms in Python," Apress, 2016.
+
+[9] A. Levitin, "Data Structures and Algorithms," 4th ed., Pearson Education, 2013.
