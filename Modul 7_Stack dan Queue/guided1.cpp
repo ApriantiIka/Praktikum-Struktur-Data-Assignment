@@ -76,26 +76,27 @@ void cetakArrayBuku() {
 }
 
 int main() {
+    // menambahkan data ke dalam stack
     pushArrayBuku("Kalkulus"); //karena yang pertama dimasukkan maka posisi yang paling bawah kalkulus
     pushArrayBuku("Struktur Data");
     pushArrayBuku("Matematika Diskrit");
     pushArrayBuku("Dasar Multimedia");
     pushArrayBuku("Inggris");
 
-    cetakArrayBuku();
+    cetakArrayBuku(); // mencetak stack
     cout << "\n";
-    cout << "Apakah data stack penuh? " << isFull() << endl;
-    cout << "Apakah data stack kosong? " << isEmpty() << endl;
+    cout << "Apakah data stack penuh? " << isFull() << endl; // memeriksa apakah stack penuh atau tidak
+    cout << "Apakah data stack kosong? " << isEmpty() << endl; // memeriksa apakah stack kosong atau tidak
     peekArrayBuku(2); // melihat buku ke 2
     popArrayBuku(); // menghapus buku paling atas
-    cout << "Banyaknya data = " << countStack() << endl;
-    changeArrayBuku(2, "Bahasa Jerman"); // mengganti buku matdis menjadi b jerman
+    cout << "Banyaknya data = " << countStack() << endl; // menghitung jumlah elemen di stack
+    changeArrayBuku(2, "Bahasa Jerman"); // mengganti buku matdis menjadi buku bahasa jerman
     cout << endl;
     cetakArrayBuku();
     cout << "\n";
-    destroyArraybuku(); // semua data dihapus
-    cout << "Jumlah data setelah dihapus: " << top << endl;
-    cetakArrayBuku();
+    destroyArraybuku(); // menghapus semua data
+    cout << "Jumlah data setelah dihapus: " << top << endl; // memeriksa jumlah elemen stack setelah dihapus
+    cetakArrayBuku(); // mencetak data stack setelah dihapus
 
     return 0;
 }
