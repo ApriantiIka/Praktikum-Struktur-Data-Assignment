@@ -4,7 +4,7 @@
 
 ## Dasar Teori
 ### 1. Graph
-Dalam matematika diskrit, graph (juga dikenal sebagai graf atau digraf) adalah struktur yang terdiri dari kumpulan objek, yang disebut simpul (node), dan hubungan di antara pasangan objek tersebut, yang disebut sisi (edge). Sisi dapat menghubungkan dua simpul yang sama (self-loop) atau dua simpul yang berbeda. Graph dapat digambarkan secara visual dengan gambar yang terdiri dari titik-titik yang (simpul) dan garis yang menghubungkan titik-titik tersebut (edge). Graph memiliki beberapa karakteristik, yaitu [1]:
+Dalam matematika diskrit, graph (juga dikenal sebagai graf atau digraf) adalah struktur yang terdiri dari kumpulan objek yang disebut simpul (node), dan hubungan di antara pasangan objek tersebut yang disebut sisi (edge). Sisi dapat menghubungkan dua simpul yang sama (self-loop) atau dua simpul yang berbeda. Graph dapat digambarkan secara visual dengan gambar yang terdiri dari titik-titik yang (simpul) dan garis yang menghubungkan titik-titik tersebut (edge). Graph memiliki beberapa karakteristik, yaitu [1]:
 - Node yang unik. Setiap node dalam graph memiliki identitas yang unik dan tidak boleh ada node yang duplikat.
 - Hubungan antar node. Edge digunakan untuk merepresentasikan hubungan antar node. Edge dapat berarah (memiliki arah) atau tidak berarah.
 - Bobot edge. Edge dapat memiliki nilai yang disebut bobot yang menghubungkan antar node.
@@ -472,7 +472,7 @@ Dalam fungsi `simpulAkar()`, kita melakukan pengecekan apakah `root` masih `NULL
 Dalam fungsi `main()`, kita memanggil fungsi `inisialisasi()` untuk menginisialisasi `root` menjadi `NULL`. Kemudian, kita memanggil fungsi `simpulAkar()` untuk membuat simpul akar, dan fungsi `tambahSimpul()` untuk menambah simpul ke pohon. Setelah itu, kita memanggil fungsi `preOrder()`, `inOrder()`, dan `postOrder()` untuk menampilkan pohon dalam berbagai urutan. Terakhir, kita memanggil fungsi `bacaPohon()` untuk menampilkan pohon dalam bentuk tree.
 
 ## Kesimpulan
-Algoritma 
+Graph dan Tree merupakan struktus data dalam ilmu komputer yang digunakan untuk merepresentasikan hubungan antar data. Graph adalah struktur yang terdiri dari kumpulan objek (node) yang dihubungkan oleh sisi (edge). Edge dapat berarah dan tidak berarah dan dapat memiliki bobot. Graph digunakan untuk merepresentasikan hubungan antar data yang bersifat non-hierarkis, seperti jaringan sosial, jaringan transportasi, dan peta. Tree adalah struktur data yang terdiri dari node (simpul) dan hubungan hierarkis. Setiap node memiliki parent node (induk) dan child node (anak). Tree digunakan untuk merepresentasikan hubungan antar data yang bersifat hierarkis, seperti struktur organisasi, struktur folder dalam sistem operasi, dan pohon leluhur dalam silsilah keluarga.
 
 ## Referensi
 [1] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, Introduction to Algorithms, MIT Press, 2021.
